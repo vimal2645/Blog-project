@@ -9,7 +9,7 @@ export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   useEffect(() => {
-    fetch('http://localhost:1337/api/articles?populate=*')
+    fetch('https://blog-project-uvhu.onrender.com/api/articles?populate=*')
       .then(res => {
         if (!res.ok) throw new Error('API error');
         return res.json();
@@ -101,8 +101,9 @@ export default function Home() {
           filtered.map(article => {
             const attr = article.attributes || article;
             let imageUrl = '';
-            if (attr.coverImage?.url) imageUrl = `http://localhost:1337${attr.coverImage.url}`;
-            else if (attr.CoverImage?.data?.attributes?.url) imageUrl = `http://localhost:1337${attr.CoverImage.data.attributes.url}`;
+            if (attr.coverImage?.url) imageUrl = `https://blog-project-uvhu.onrender.com${attr.coverImage.url}`;
+            else if (attr.CoverImage?.data?.attributes?.url) imageUrl = `https://blog-project-uvhu.onrender.com${attr.CoverImage.data.attributes.url}`;
+
             const tags = Array.isArray(attr.tags || attr.Tags)
               ? (attr.tags || attr.Tags).join(', ')
               : (attr.tags || attr.Tags || '');

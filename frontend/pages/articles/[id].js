@@ -11,7 +11,8 @@ export default function ArticleDetail() {
 
   useEffect(() => {
     if (id) {
-      fetch(`http://localhost:1337/api/articles/${id}?populate=*`)
+      fetch(`https://blog-project-uvhu.onrender.com/api/articles/${id}?populate=*`)
+
         .then(res => {
           if (!res.ok) throw new Error('Article not found');
           return res.json();
@@ -58,10 +59,10 @@ export default function ArticleDetail() {
   // Extract image URL
   let imageUrl = '';
   if (attr.coverImage?.url) {
-    imageUrl = `http://localhost:1337${attr.coverImage.url}`;
-  } else if (attr.CoverImage?.data?.attributes?.url) {
-    imageUrl = `http://localhost:1337${attr.CoverImage.data.attributes.url}`;
-  }
+  imageUrl = `https://blog-project-uvhu.onrender.com${attr.coverImage.url}`;
+} else if (attr.CoverImage?.data?.attributes?.url) {
+  imageUrl = `https://blog-project-uvhu.onrender.com${attr.CoverImage.data.attributes.url}`;
+}
 
   // Extract tags
   const tags = Array.isArray(attr.tags || attr.Tags)
