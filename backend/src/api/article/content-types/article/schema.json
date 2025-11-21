@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article",
+    "description": "Blog article content"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "minLength": 5,
+      "maxLength": 200
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "excerpt": {
+      "type": "text",
+      "required": true,
+      "maxLength": 300
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "author": {
+      "type": "string",
+      "required": true,
+      "default": "Admin"
+    },
+    "readTime": {
+      "type": "integer",
+      "required": true,
+      "default": 5
+    },
+    "tags": {
+      "type": "string",
+      "required": false
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Tech",
+        "AI",
+        "Tutorial",
+        "News",
+        "Opinion"
+      ]
+    }
+  }
+}

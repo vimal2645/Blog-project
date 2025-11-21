@@ -1,0 +1,28 @@
+# Node modules and build
+node_modules/
+build/
+.cache/
+.tmp/
+dist/
+.next/
+
+# Strapi uploads and database
+public/uploads/
+.env
+.env.*
+/database.sqlite
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor/project config
+.idea/
+.vscode/
+*.swp

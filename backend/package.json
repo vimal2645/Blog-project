@@ -1,0 +1,23 @@
+{
+  "name": "blog-backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Strapi Blog CMS",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-graphql": "^4.15.0",
+    "@strapi/plugin-users-permissions": "^4.26.0",
+    "@strapi/strapi": "^4.15.0",
+    "pg": "^8.8.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^5.3.4",
+    "sqlite3": "^5.1.6",
+    "styled-components": "^5.3.11"
+  }
+}

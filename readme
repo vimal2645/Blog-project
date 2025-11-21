@@ -1,0 +1,36 @@
+# Strapi + Next.js Blog Website
+
+This project is a full-stack blog website using **Strapi** as the backend (Headless CMS) and **Next.js** as the frontend.
+
+## Features
+
+- Create, edit, and manage blog posts using Strapi admin panel
+- Rich content: supports images, tags, and categories for each post
+- Modern, responsive frontend built with React/Next.js
+- Articles grouped by category
+- Advanced search and filter by tags or category
+
+## Architecture
+
+- **Frontend:** Next.js app fetches articles from Strapi API and displays blog pages
+- **Backend:** Strapi provides REST API for content management and stores articles in a database
+- **Database:** SQLite (default) or Postgres
+- **Media:** Images are uploaded and managed through Strapi
+
+## Getting Started
+
+### 1. Backend (Strapi)
+cd backend
+npm install
+npm run develop
+
+- Open `http://localhost:1337/admin`, create your first user, and set up your content types.
+
+### 2. Frontend (Next.js)
+
+cd frontend
+npm install
+npm run dev
+.
+- Visit `http://localhost:3000` to see your blog.
+- Make sure `backend` is running so frontend can fetch articles.
